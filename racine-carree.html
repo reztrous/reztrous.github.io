@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Racine carrée - Résumé interactif</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="description"
+          content="Résumés de cours à tours." />
+    <meta name="keywords" content="cours, maths, collège, lycée" />
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        extensions: ["tex2jax.js"],
+        MathMenu: {
+            showLocale: false,
+        },
+        jax: ["input/TeX","output/HTML-CSS"],
+        tex2jax: {
+            inlineMath: [['$','$']],
+            displayMath: [['$$','$$']],
+            }
+        });
+    </script>
+    <script type="text/javascript" src="mathjax/MathJax.js?locale=fr"></script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+</head>
+<body>
+    <noscript>
+        <div style="color:#CC0000; text-align:center">
+        Besoin de Javascript pour mettre en forme cette page (maths, code source et commentaires).
+        </div>
+    </noscript>
+
+<!-- ----------------------------- -->
+
+<h1>Résumé Racine carrée</h1>
+
+<p>On considère un nombre positif $a$.</p>
+
+<h2>Propriété, définition, notation</h2>
+
+<p>Il existe un seul nombre positif dont le carré vaut $a$.<br>
+Ce nombre est appelé <u>racine carrée de a</u>.<br>
+Ce nombre est noté $\sqrt a$.</p>
+
+<h2>Exemples</h2>
+<ul>
+    <li>$12^2 = 144$ et $12 > 0$, donc $\sqrt {144} = 12$</li>
+    <li>$(-9)^2 = 81$ mais $\sqrt{81} \ne -9$ car $-9$ n’est pas positif.</li>
+</ul>
+
+<h2>Remarque</h2>
+<p>$\sqrt {144}$ a une écriture décimale (c’est 12) mais attention,
+le nombre $\sqrt a$ n’a pas toujours une écriture décimale.<br>
+Par exemple, $\sqrt 2$ n’en a pas. Le nombre 1,414213562 donné par la
+calculatrice est seulement une valeur approchée de $\sqrt 2$.</p>
+
+<h2>Propriété (lien avec l’aire d’un carré)</h2>
+<p>Si l’aire d’un carré vaut $a$, alors la longueur de son côté vaut $\sqrt a$.
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="300" height="300">
+  <rect x="50" y="50" width="200" height="200"
+        stroke-width="3" stroke="#000" fill="#ddd"/>
+  <g stroke-width="3" stroke="#000">
+    <line x1="147" y1="40" x2="147" y2="60"/>
+    <line x1="153" y1="40" x2="153" y2="60"/>
+    <line x1="147" y1="240" x2="147" y2="260"/>
+    <line x1="153" y1="240" x2="153" y2="260"/>
+    <line x1="40" y1="147" x2="60" y2="147"/>
+    <line x1="40" y1="153" x2="60" y2="153"/>
+    <line x1="240" y1="147" x2="260" y2="147"/>
+    <line x1="240" y1="153" x2="260" y2="153"/>
+  </g>
+  <text x="0" y="150">&#x221a;<tspan dy="-1">a&#x305;</tspan></text>
+  <text x="40" y="290" font-size="18">Carré dont l’aire vaut a</text>
+</svg>
+
+<h2>Propriété (lien avec les équations)</h2>
+<p>Si $a$ est strictement positif, l’équation $x^2 = a$ d’inconnue $x$
+admet exactement deux solutions :</p>
+<ul>
+    <li>une solution positive qui est $\sqrt a$;</li>
+	<li>une solution négative qui est $-\sqrt a$.</li>
+</ul>
+
+<h2>Exemple</h2>
+<p>L’équation  $x^2 = 3$ a deux solutions : $\sqrt 3$ et $-\sqrt 3$.<br>
+Autrement dit, $\sqrt 3$ et $-\sqrt 3$ sont les seuls nombres dont le carré
+vaut 3.</p>
+
+
+
+
+<!-- ----------------------------- -->
+
+    <input type="button" onClick="verifier()" value="Vérifier" />
+    <script src="reztrous.js"></script>
+</body>
+</html>
